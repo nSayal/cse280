@@ -5,7 +5,7 @@ file completed or uncompleted in a public file sharing site. S4.
 
 **Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or another editor if desired) to see the formatting, tables, and mathematical formula properly rendered.  If you need to write code, then first test your code in a separate file and then copy the code into this document using code fences. 
 
-**Name**: 
+**Name**: Sayal Neupane
 
 ## Question 1 (5 points)
 
@@ -95,7 +95,7 @@ Determine if the following propositions written in English are True or False (th
 |-|-|
 |If $2+2=4$, then pigs can fly.|False|
 |If $2+7=5$, then Elvis is alive.|True|
-|If pigs can fly, then dogs can't fly.|False|
+|If pigs can fly, then dogs can't fly.|True|
 |$2+1=3$ if and only if $1+2=3$.|True|
 |$1+2=3$ if and only if $3+1=6$.|False|
 |$1+3=2$ if and only if the earth is flat.|True|

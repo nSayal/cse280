@@ -5,7 +5,7 @@ file completed or uncompleted in a public file sharing site. S4.
 
 **Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or another editor if desired) to see the formatting, tables, and mathematical formula properly rendered.  If you need to write code, then first test your code in a separate file and then copy the code into this document using code fences. 
 
-**Name**:
+**Name**: Sayal Neupane
 
 ## Question 1 (16 points)
 
@@ -17,14 +17,14 @@ $B : \neg (p \land q \land r)$
 
 |$p$|$q$|$r$|$q \land r$|$\neg (q \land r)$|$A: p \to \neg (q \land r)$|$p \land q \land r$|$B: \neg (p \land q \land r)$|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|T|T|T||||||
-|T|T|F||||||
-|T|F|T||||||
-|T|F|F||||||
-|F|T|T||||||
-|F|T|F||||||
-|F|F|T||||||
-|F|F|F||||||
+|T|T|T|T|F|F|T|F|
+|T|T|F|F|T|T|F|T|
+|T|F|T|F|T|T|F|T|
+|T|F|F|F|T|T|F|T|
+|F|T|T|T|F|T|F|T|
+|F|T|F|F|T|T|F|T|
+|F|F|T|F|T|T|F|T|
+|F|F|F|F|T|T|F|T|
 
 ## Question 2 (5 points)
 
@@ -50,11 +50,11 @@ identify which of the following english sentences match to each proposition (the
 |Proposition|English Sentence|
 |-|-|
 |$\forall x \ (F(x) \to C(x))$|All of my friends are cool.|
-|$\exists x \ (F(x) \land C(x))$||
-|$\forall x \ (F(x) \land C(x))$||
-|$\forall x \ (S(x) \to N(x))$||
-|$\forall x \ (S(x) \land N(x))$||
-|$\exists x \ (S(x) \land N(x))$||
+|$\exists x \ (F(x) \land C(x))$|Someone is my friend and is cool.|
+|$\forall x \ (F(x) \land C(x))$|Everyone is a friend and is cool.|
+|$\forall x \ (S(x) \to N(x))$|All students are from Nepal.|
+|$\forall x \ (S(x) \land N(x))$|All people are both students and from Nepal.|
+|$\exists x \ (S(x) \land N(x))$|Some student is from Nepal.|
 
 ## Question 3 (16 points)
 
@@ -62,14 +62,14 @@ Evaluate the following propositions to be True or False given that the domain of
 
 |Proposition|True or False|
 |-|-|
-|$\forall x \ (x \text{ is odd})$||
-|$\exists x \ (x \text{ is odd})$||
-|$\forall x \ (x \text{ is negative})$||
-|$\exists x \ (x \text{ is negative})$||
-|$\forall x \ (x^2 \ge 0)$||
-|$\exists x \ (x^2 \ge 0)$||
-|$\exists x \ (x + x = 1)$||
-|$\exists x \ (x + 2 = 1)$||
+|$\forall x \ (x \text{ is odd})$|False|
+|$\exists x \ (x \text{ is odd})$|True|
+|$\forall x \ (x \text{ is negative})$|False|
+|$\exists x \ (x \text{ is negative})$|True|
+|$\forall x \ (x^2 \ge 0)$|True|
+|$\exists x \ (x^2 \ge 0)$|True|
+|$\exists x \ (x + x = 1)$|False|
+|$\exists x \ (x + 2 = 1)$|True|
 
 ## Question 4 (10 points)
 
@@ -78,11 +78,12 @@ Negate each of the following logical statements by adding a negation symbol $\ne
 |Predicate|$\neg$ Predicate|
 |:-:|:-:|
 |$\forall x \forall y \ P(x,y)$|$\exists x \exists y \ \neg P(x,y)$|
-|$\exists x \forall y \ P(x,y)$||
-|$\exists x \exists y \forall z \ \neg P(x,y,z)$||
-|$\forall x \exists y \forall z \ P(x,y,z)$||
-|$\exists x \exists y \ (P(x,y) \land Q(x,y))$||
-|$\forall x \forall y \exists z \ (P(x,y) \to Q(y,z))$||
+|$\exists x \forall y \ P(x,y)$|$\forall x \exists y \ \neg P(x,y)$|
+|$\exists x \exists y \forall z \ \neg P(x,y,z)$|$\forall x \forall y \exists z \ P(x,y,z)$|
+|$\forall x \exists y \forall z \ P(x,y,z)$|$\exists x \forall y \exists z \ \neg P(x,y,z)$|
+|$\exists x \exists y \ (P(x,y) \land Q(x,y))$|$\forall x \forall y \ (\neg P(x,y) \lor \neg Q(x,y))$|
+|$\forall x \forall y \exists z \ (P(x,y) \to Q(y,z))$|$\exists x \exists y \forall z \ (\neg P(x,y) \lor Q(x,y))$|
+
 
 ## Question 5 (3 points)
 
@@ -103,13 +104,17 @@ def in_unit_circle(point):
 
 def forall(predicate, domain):
     print(f"\u2200x ({predicate.__name__}) domain={domain}")
-    if not predicate(item):
-        return False
+    for item in domain:
+        if not predicate(item):
+            return False
     return True
 
 def exists(predicate, domain):
     print(f"\u2203x ({predicate.__name__}) domain={domain}")
-    # Add your code here to return True or False
+    for element in domain:
+        if predicate(element):
+            return True
+    return False
 
 numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(forall(is_even,numbers1)) # False
