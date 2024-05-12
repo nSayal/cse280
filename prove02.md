@@ -82,7 +82,7 @@ Negate each of the following logical statements by adding a negation symbol $\ne
 |$\exists x \exists y \forall z \ \neg P(x,y,z)$|$\forall x \forall y \exists z \ P(x,y,z)$|
 |$\forall x \exists y \forall z \ P(x,y,z)$|$\exists x \forall y \exists z \ \neg P(x,y,z)$|
 |$\exists x \exists y \ (P(x,y) \land Q(x,y))$|$\forall x \forall y \ (\neg P(x,y) \lor \neg Q(x,y))$|
-|$\forall x \forall y \exists z \ (P(x,y) \to Q(y,z))$|$\exists x \exists y \forall z \ (\neg P(x,y) \lor Q(x,y))$|
+|$\forall x \forall y \exists z \ (P(x,y) \to Q(y,z))$|$\exists x \exists y \forall z \ ( P(x,y) \lor \neg Q(x,y))$|
 
 
 ## Question 5 (3 points)
