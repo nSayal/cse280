@@ -5,7 +5,7 @@ file completed or uncompleted in a public file sharing site. S4.
 
 **Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or another editor if desired) to see the formatting, tables, and mathematical formula properly rendered.  If you need to write code, then first test your code in a separate file and then copy the code into this document using code fences. 
 
-**Name**:
+**Name**: Sayal Neupane
 
 ## Question 1 (24 points)
 
@@ -14,23 +14,23 @@ For each of these functions, determine if they are well-defined, one-to-one, and
 |Function|Well-Defined Function|One-to-One Function|Onto Function|
 |:-:|:-:|:-:|:-:|
 |$f : A \to B, \text{ where } f = \lbrace (1,a),(2,b),(3,c),(4,d) \rbrace$|Yes|Yes|Yes|
-|$f : A \to B, \text{ where } f = \lbrace (1,a),(2,a),(3,b),(4,d) \rbrace$||||
-|$f : A \to B, \text{ where } f = \lbrace (1,a),(2,b),(3,c) \rbrace$||||
-|$f : A \to B, \text{ where } f = \lbrace (1,a),(2,b),(2,c),(3,a),(4,a) \rbrace$||||
-|$f : \mathbf{R} \to \mathbf{R}, \text{ where } f(x) = x^3-x$||||
-|$f : \mathbf{Z} \to \mathbf{Z}, \text{ where } f(x) = -x+2$||||
-|$f : \mathbf{Z}^+ \to \mathbf{Z}^+, \text{ where } f(x) = \lceil \frac {x}{2} \rceil$||||
-|$f : \mathbf{R} \to \mathbf{R}, \text{ where } f(x) = \frac{5}{x-5}$||||
-|$f : \lbrace x \mid x \in \mathbf{R} , x \ne 5 \rbrace \to \mathbf{R}, \text{ where } f(x) = \frac{5}{x-5}$||||
+|$f : A \to B, \text{ where } f = \lbrace (1,a),(2,a),(3,b),(4,d) \rbrace$|Yes|No|No|
+|$f : A \to B, \text{ where } f = \lbrace (1,a),(2,b),(3,c) \rbrace$|No|No|No|
+|$f : A \to B, \text{ where } f = \lbrace (1,a),(2,b),(2,c),(3,a),(4,a) \rbrace$|No|No|NO|
+|$f : \mathbf{R} \to \mathbf{R}, \text{ where } f(x) = x^3-x$|Yes|NO|Yes|
+|$f : \mathbf{Z} \to \mathbf{Z}, \text{ where } f(x) = -x+2$|Yes|Yes|Yes|
+|$f : \mathbf{Z}^+ \to \mathbf{Z}^+, \text{ where } f(x) = \lceil \frac {x}{2} \rceil$|Yes|NO|Yes|
+|$f : \mathbf{R} \to \mathbf{R}, \text{ where } f(x) = \frac{5}{x-5}$|NO|No|NO|
+|$f : \lbrace x \mid x \in \mathbf{R} , x \ne 5 \rbrace \to \mathbf{R}, \text{ where } f(x) = \frac{5}{x-5}$|Yes|Yes|Yes|
 
 ## Question 2 (9 points)
 
 Explain why $f : \mathbf{R} \to \mathbf{R} \text{ where } f(x) = x^2$ is a well defined funtion but is niether one-to-one nor onto (with counterexamples as needed).
 
-**Answer**:  
-* Is Well Defined because ...
-* Not One-to-One because ...
-* Not Onto because ...
+**Answers**:
+* Is Well Defined because for any real number x, there exists a only one f(x), ensuring that every domain has a corresponding value.
+* Not One-to-One because multiple domains can give the same value in this function. Such as, f(2) = $2^2$ = 4 and f(-2) = $(-2)^2$ 4, showing that distinct inputs map to the same output.
+* Not Onto because not every real number is covered by the function's mapping. For example, there is no real number whose square is negative since squaring real number always gives non-negative result.
 
 ## Question 3 (9 points)
 
@@ -38,9 +38,9 @@ Find the inverse of each of the following functions, calculate $f(3)$, and then 
 
 |Domain|$f(x)$|$f^{-1}(x)$|$f(3)$|$(f^{-1} \circ f)(3)$
 |:-:|:-:|:-:|:-:|:-:|
-|$f : \mathbf{R} \to \mathbf{R}$|$2x+3$||||
-|$f : \mathbf{R}^+ \to \lbrace y \mid y \in \mathbf{R}, y \gt 1 \rbrace$|$3^x$||||
-|$f : \lbrace x \mid x \in \mathbf{R}, x \gt \sqrt{2} \rbrace \to \lbrace y \mid y \in \mathbf{R}, y \gt 0 \rbrace$|$x^2-2$||||
+|$f : \mathbf{R} \to \mathbf{R}$|$2x+3$|$\frac{x-3}2$|9|3|
+|$f : \lbrace x \in \mathbf{R} : x \gt 0 \rbrace \to \mathbf{R}$|$3^x$|$log_3(x)$|27|3|
+|$f : \lbrace x \in \mathbf{R} : x \ge -2 \rbrace \to \mathbf{R}^+$|$x^2-2$|$\sqrt{x+2} \ or -\sqrt{x+2}$|7|3, -3|
 
 
 ## Question 4 (8 points)
@@ -54,9 +54,9 @@ Create lambda functions to implement the following functions that have domain of
 The test code below will use the lambda functions to generate the set of all $(X, f(X))$ where $X=\lbrace x \in \mathbf{Z} : -5 \le x \le 5 \rbrace$:
 
 ```python
-f1 = None # Put your lambda code here
-f2 = None # Put your lambda code here
-f3 = None # Put your lambda code here
+f1 = lambda x : x ** 3 + x ** 2 + x + 1 
+f2 = lambda x : 3 * x + 5 
+f3 = lambda x : (x * ( x+ 1))/ 2
 
 domain = range(-5,6)
 f1_points = {(x,f1(x)) for x in domain}
