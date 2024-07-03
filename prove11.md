@@ -5,7 +5,7 @@ file completed or uncompleted in a public file sharing site. S4.
 
 **Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or another editor if desired) to see the formatting, tables, and mathematical formula properly rendered.  If you need to write code, then first test your code in a separate file and then copy the code into this document using code fences. 
 
-**Name**:
+**Name**: Sayal Neupane
 
 ## Question 1 (9 points)
 
@@ -25,9 +25,10 @@ Answer: 1
 
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
-||||
-||||
-||||
+|39|501|33|
+|33|39|6|
+|6|33|3|
+|3|6|0|
 
 Answer: 
 
@@ -35,9 +36,9 @@ Answer:
 
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
-||||
-||||
-||||
+|110|765|105|
+|105|110|5|
+|5|105|0|
 
 Answer: 
 
@@ -45,9 +46,11 @@ Answer:
 
 |$x$|$y$|$r = y \mod x$|
 |:-:|:-:|:-:|
-||||
-||||
-||||
+|493|899|406|
+|406|493|87|
+|87|406|58|
+|58|87|29|
+|29|58|0|
 
 Answer: 
 
@@ -58,8 +61,8 @@ Find the $gcd$ for the first three problems from Question 1 using the Extended E
 |Problem|$gcd = s*x + t*y$|
 |:-:|:-:|
 |$gcd(43,57)$|$1 = 4*43 - 3*57$|
-|$gcd(39,501)$||
-|$gcd(110,765)$||
+|$gcd(39,501)$|$3=-77*39+6*501$|
+|$gcd(110,765)$|$5=7*110-1*765$|
 
 
 ## Question 3 (8 points)
@@ -68,15 +71,18 @@ Find the multiplicative inverse for $x \text{ mod } n$ in the table below.  Thes
 
 |$x$|$n$|Multiplicative Inverse|
 |:-:|:-:|:-:|
-|2|7||
-|5|11||
-|7|20||
-|3|13||
+|2|7|4|
+|5|11|9|
+|7|20|23|
+|3|13|9|
 
 ## Question 4 (9 points)
 Use the Extended Euclidean Algorithm to find the multiplicative inverse of $83 \text{ mod } 96$.  
 
 Answer:
+* $s = -37$
+* $t = 32$
+* Multiplicative Inverse = 59
 
 ## Question 5 (15 points)
 
