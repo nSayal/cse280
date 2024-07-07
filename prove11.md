@@ -113,7 +113,7 @@ def gcd_ext(x,y):
 ```
 
 Answer:
-* d (private key) =
+* d (private key) = 9019
 
 ### Part 2
 
@@ -124,15 +124,35 @@ Write code in Python do the following using the values from Part 1 above:
 
 
 ```python
-m = 5645
-# Write code to encrypt 'm' and display it
+def gcd_ext(x, y):
+    if x == 0:
+        return y, 0, 1
+    else:
+        g, a, b = gcd_ext(y % x, x)
+        return g, b - (y // x) * a, a
 
-print(c)
-# Write code to decrypt it back again and display it.   It should be 5645 again.
+# Given values
+p = 137
+q = 211
+e = 19
 
-print(m)
+# Calculate (p-1)(q-1)
+modulus = (p - 1) * (q - 1)
+
+# Use the gcd_ext function to find d
+_, d, _ = gcd_ext(e, modulus)
+
+print(f"The private key d is: {d}")
+
+# Encryption
+m = 5465
+n = p * q
+c = pow(m, e, n)
+print(f"Encrypted value c is: {c}")
+
+# Decryption
+decrypted_m = pow(c, d, n)
+print(f"Decrypted value is: {decrypted_m}")
+
 ```
-
-
-
   
