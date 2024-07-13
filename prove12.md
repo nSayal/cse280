@@ -57,7 +57,7 @@ Suppose you flip a fair coin 10 times.  Determine how many ways you can get each
 
 |Scenario|Number of Ways|
 |:-:|:-:|
-|no heads||
+|no heads|1|
 |exactly one head|10|
 |exactly two heads|45|
 |at least two heads|1013|
