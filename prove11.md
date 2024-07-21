@@ -30,7 +30,7 @@ Answer: 1
 |6|33|3|
 |3|6|0|
 
-Answer: 
+Answer: 3
 
 **Problem C**: $gcd(110,765)$
 
@@ -40,7 +40,7 @@ Answer:
 |105|110|5|
 |5|105|0|
 
-Answer: 
+Answer: 5
 
 **Problem D**: $gcd(493,899)$
 
@@ -52,7 +52,7 @@ Answer:
 |58|87|29|
 |29|58|0|
 
-Answer: 
+Answer: 29
 
 ## Question 2 (10 points)
 
@@ -73,7 +73,7 @@ Find the multiplicative inverse for $x \text{ mod } n$ in the table below.  Thes
 |:-:|:-:|:-:|
 |2|7|4|
 |5|11|9|
-|7|20|23|
+|7|20|3|
 |3|13|9|
 
 ## Question 4 (9 points)
